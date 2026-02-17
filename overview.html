@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Financial Dashboard Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee79",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102217",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-[#112218] flex flex-col border-r border-[#326747]/30">
+<div class="p-6 flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[#112218] font-bold">account_balance_wallet</span>
+</div>
+<div>
+<h1 class="text-white text-lg font-bold leading-none">FinTrack</h1>
+<p class="text-[#92c9a8] text-xs mt-1">Premium Account</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-[#92c9a8] hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="text-sm font-semibold">Accounts</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-[#92c9a8] hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-semibold">Budget</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-[#92c9a8] hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-sm font-semibold">Transactions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-[#92c9a8] hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">savings</span>
+<span class="text-sm font-semibold">Savings Goals</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-[#92c9a8] hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-semibold">Settings</span>
+</a>
+</nav>
+<div class="p-6 border-t border-[#326747]/30">
+<button class="w-full bg-primary text-[#112218] font-bold py-3 rounded-xl flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span class="text-sm">New Transaction</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto px-8 py-8 space-y-8">
+<!-- Header Section -->
+<header class="flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-white">Financial Overview</h2>
+<p class="text-[#92c9a8] mt-1">Welcome back, here's what's happening with your money.</p>
+</div>
+<div class="flex items-center gap-4 bg-[#112218] p-1 rounded-xl border border-[#326747]/50">
+<button class="px-4 py-2 rounded-lg bg-[#234832] text-white text-xs font-bold">Last 30 Days</button>
+<button class="px-4 py-2 rounded-lg text-[#92c9a8] text-xs font-bold hover:text-white">Last 6 Months</button>
+<button class="px-4 py-2 rounded-lg text-[#92c9a8] text-xs font-bold hover:text-white">Year to Date</button>
+</div>
+</header>
+<!-- KPI Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-[#112218] border border-[#326747] p-6 rounded-2xl flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-[#92c9a8] text-sm font-medium">Total Net Worth</p>
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<p class="text-white text-3xl font-bold">$125,430.00</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="text-primary text-sm font-bold">+2.4%</span>
+<span class="text-[#92c9a8] text-xs">from last month</span>
+</div>
+</div>
+<div class="bg-[#112218] border border-[#326747] p-6 rounded-2xl flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-[#92c9a8] text-sm font-medium">Monthly Income</p>
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<p class="text-white text-3xl font-bold">$8,500.00</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="text-primary text-sm font-bold">+5.2%</span>
+<span class="text-[#92c9a8] text-xs">above target</span>
+</div>
+</div>
+<div class="bg-[#112218] border border-[#326747] p-6 rounded-2xl flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-[#92c9a8] text-sm font-medium">Monthly Expenses</p>
+<span class="material-symbols-outlined text-orange-500">shopping_cart</span>
+</div>
+<p class="text-white text-3xl font-bold">$4,200.00</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="text-orange-500 text-sm font-bold">-12.5%</span>
+<span class="text-[#92c9a8] text-xs">less than expected</span>
+</div>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Cash Flow Line Chart -->
+<div class="lg:col-span-2 bg-[#112218] border border-[#326747] p-6 rounded-2xl">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-white font-bold text-lg">Monthly Cash Flow</h3>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="text-xs text-[#92c9a8]">Income</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-orange-500"></div>
+<span class="text-xs text-[#92c9a8]">Expenses</span>
+</div>
+</div>
+</div>
+<div class="h-64 relative flex flex-col justify-end">
+<svg fill="none" height="100%" preserveaspectratio="none" viewbox="0 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<!-- Income Line -->
+<path d="M0 109C18 109 18 21 36 21C54 21 54 41 72 41C90 41 90 93 108 93C127 93 127 33 145 33C163 33 163 101 181 101C199 101 199 61 217 61C236 61 236 45 254 45C272 45 272 121 290 121C308 121 308 149 326 149C344 149 344 1 363 1C381 1 381 81 399 81C417 81 417 129 435 129C453 129 453 25 472 25" stroke="#2bee79" stroke-linecap="round" stroke-width="3"></path>
+<!-- Expense Line -->
+<path d="M0 130C18 130 18 100 36 100C54 100 54 110 72 110C90 110 90 140 108 140C127 140 127 110 145 110C163 110 163 120 181 120C199 120 199 130 217 130C236 130 236 135 254 135C272 135 272 110 290 110C308 110 308 120 326 120C344 120 344 130 363 130C381 130 381 120 399 120C417 120 417 115 435 115C453 115 453 125 472 125" stroke="#f97316" stroke-dasharray="4 4" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<div class="flex justify-between mt-4">
+<p class="text-[#92c9a8] text-[11px] font-bold">JAN</p>
+<p class="text-[#92c9a8] text-[11px] font-bold">FEB</p>
+<p class="text-[#92c9a8] text-[11px] font-bold">MAR</p>
+<p class="text-[#92c9a8] text-[11px] font-bold">APR</p>
+<p class="text-[#92c9a8] text-[11px] font-bold">MAY</p>
+<p class="text-[#92c9a8] text-[11px] font-bold">JUN</p>
+</div>
+</div>
+</div>
+<!-- Spending Doughnut Category Chart (Simulated with Bar Representation for simplicity/clarity) -->
+<div class="bg-[#112218] border border-[#326747] p-6 rounded-2xl">
+<h3 class="text-white font-bold text-lg mb-6">Spending by Category</h3>
+<div class="space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-medium mb-1">
+<span class="text-white">Housing</span>
+<span class="text-[#92c9a8]">$1,800 (42%)</span>
+</div>
+<div class="h-2 w-full bg-[#234832] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-medium mb-1">
+<span class="text-white">Food &amp; Dining</span>
+<span class="text-[#92c9a8]">$650 (15%)</span>
+</div>
+<div class="h-2 w-full bg-[#234832] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full opacity-80" style="width: 15%;"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-medium mb-1">
+<span class="text-white">Transportation</span>
+<span class="text-[#92c9a8]">$400 (9%)</span>
+</div>
+<div class="h-2 w-full bg-[#234832] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full opacity-60" style="width: 9%;"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-medium mb-1">
+<span class="text-white">Utilities</span>
+<span class="text-[#92c9a8]">$320 (8%)</span>
+</div>
+<div class="h-2 w-full bg-[#234832] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full opacity-40" style="width: 8%;"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-medium mb-1">
+<span class="text-white">Entertainment</span>
+<span class="text-[#92c9a8]">$280 (7%)</span>
+</div>
+<div class="h-2 w-full bg-[#234832] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full opacity-20" style="width: 7%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Transactions Table -->
+<div class="bg-[#112218] border border-[#326747] rounded-2xl overflow-hidden">
+<div class="p-6 border-b border-[#326747]">
+<h3 class="text-white font-bold text-lg">Recent Transactions</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-[#234832]/20">
+<th class="px-6 py-4 text-[#92c9a8] text-xs font-bold uppercase tracking-wider">Description</th>
+<th class="px-6 py-4 text-[#92c9a8] text-xs font-bold uppercase tracking-wider">Category</th>
+<th class="px-6 py-4 text-[#92c9a8] text-xs font-bold uppercase tracking-wider">Date</th>
+<th class="px-6 py-4 text-[#92c9a8] text-xs font-bold uppercase tracking-wider text-right">Amount</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#326747]/30">
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-white">shopping_bag</span>
+</div>
+<span class="text-white text-sm font-medium">Apple Store Purchase</span>
+</div>
+</td>
+<td class="px-6 py-4 text-[#92c9a8] text-sm">Entertainment</td>
+<td class="px-6 py-4 text-[#92c9a8] text-sm">Oct 24, 2023</td>
+<td class="px-6 py-4 text-white text-sm font-bold text-right">-$199.00</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-primary">payments</span>
+</div>
+<span class="text-white text-sm font-medium">Monthly Salary</span>
+</div>
+</td>
+<td class="px-6 py-4 text-[#92c9a8] text-sm">Income</td>
+<td class="px-6 py-4 text-[#92c9a8] text-sm">Oct 22, 2023</td>
+<td class="px-6 py-4 text-primary text-sm font-bold text-right">+$5,400.00</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-white">restaurant</span>
+</div>
+<span class="text-white text-sm font-medium">Whole Foods Market</span>
+</div>
+</td>
+<td class="px-6 py-4 text-[#92c9a8] text-sm">Food &amp; Dining</td>
+<td class="px-6 py-4 text-[#92c9a8] text-sm">Oct 21, 2023</td>
+<td class="px-6 py-4 text-white text-sm font-bold text-right">-$142.50</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-white">directions_car</span>
+</div>
+<span class="text-white text-sm font-medium">Shell Gas Station</span>
+</div>
+</td>
+<td class="px-6 py-4 text-[#92c9a8] text-sm">Transportation</td>
+<td class="px-6 py-4 text-[#92c9a8] text-sm">Oct 20, 2023</td>
+<td class="px-6 py-4 text-white text-sm font-bold text-right">-$68.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-[#234832]/10 text-center">
+<button class="text-primary text-sm font-bold hover:underline underline-offset-4">View All Transactions</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>
